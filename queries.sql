@@ -27,7 +27,7 @@ RIGHT JOIN Technoculture.dbo.PhaseMast as pm
 ON sm.Code = pm.Site_Code
 
 -- PO details
-SELECT Technoculture.dbo.POrdDetailProp.DocId , Technoculture.dbo.POrdDetailProp.V_Type , Technoculture.dbo.POrdProp.PartyCode , Technoculture.dbo.POrdDetailProp.Site_Code , Technoculture.dbo.POrdProp.U_EntDt , Technoculture.dbo.ItemMast.Code , Technoculture.dbo.POrdDetailProp.Unit , Technoculture.dbo.ItemMast.Name
+SELECT TOP(100) Technoculture.dbo.POrdDetailProp.DocId , Technoculture.dbo.POrdDetailProp.V_Type , Technoculture.dbo.POrdProp.PartyCode , Technoculture.dbo.POrdDetailProp.Site_Code , Technoculture.dbo.POrdProp.U_EntDt , Technoculture.dbo.ItemMast.Code , Technoculture.dbo.POrdDetailProp.Unit , Technoculture.dbo.ItemMast.Name
 FROM Technoculture.dbo.POrdDetailProp
 INNER JOIN Technoculture.dbo.POrdProp
     ON Technoculture.dbo.POrdDetailProp.Site_Code = Technoculture.dbo.POrdProp.Site_Code
